@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+
+javafx {
+    sdk = "/opt/javaFx/"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+repositories {
+    mavenCentral()
+//    jcenter()
+}
+
+dependencies {
+    implementation group: 'com.typesafe.akka', name: 'akka-actor_2.13', version: '2.6.10'
+    implementation 'com.typesafe.akka:akka-actor-typed_2.13:2.6.10'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+}
